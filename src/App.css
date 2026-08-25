@@ -1,0 +1,545 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  font-family: 'Space Grotesk', sans-serif;
+  color: #171717;
+  background: #f2f0e9;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+h1 {
+  line-height: 1;
+}
+
+button {
+  font: inherit;
+}
+
+main {
+  min-height: 100vh;
+}
+
+.hero {
+  min-height: 90vh;
+  padding: 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-bottom: 2px solid #171717;
+}
+
+.eyebrow {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  margin: 0 0 1.5rem;
+  text-transform: uppercase;
+}
+
+.hero h1 {
+  font-size: clamp(5rem, 15vw, 13rem);
+  line-height: 1;
+  letter-spacing: -0.08em;
+  margin: 0;
+  font-weight: 700;
+}
+
+.hero h1 span {
+  -webkit-text-stroke: 2px #171717;
+  color: transparent;
+}
+
+.hero-copy {
+  max-width: 520px;
+  margin: 3rem auto 0 auto;
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  line-height: 1.3;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 4rem;
+  margin: 5rem auto 0 auto;
+  font-family: 'DM Mono', monospace;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.hero-stats strong {
+  font-size: 1.5rem;
+}
+
+.hero-stats span {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.pledges {
+  padding: 4rem 5vw;
+}
+
+.section-heading {
+  max-width: 700px;
+  margin: 5rem auto 0 auto;
+}
+
+.section-heading h2 {
+  font-size: clamp(3rem, 7vw, 7rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin: 0 auto 2rem auto;
+}
+
+.section-heading > p:last-child {
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin-bottom: 2rem;
+}
+
+.pledge-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.pledge-card {
+  border: 2px solid #171717;
+  padding: 2rem;
+  min-height: 560px;
+  display: flex;
+  flex-direction: column;
+  background: #f2f0e9;
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease;
+}
+
+.pledge-card:hover {
+  transform: translate(-5px, -5px);
+  box-shadow: 8px 8px 0 #171717;
+}
+
+.pledge-icon {
+  font-size: 3rem;
+}
+
+.pledge-amount {
+  margin: 2rem 0 0;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.pledge-card h3 {
+  font-size: 2rem;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.pledge-description {
+  line-height: 1.5;
+}
+
+.pledge-story {
+  border-top: 1px solid #171717;
+  margin-top: auto;
+  padding-top: 1rem;
+}
+
+.pledge-story span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.pledge-story p {
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.pledge-card button,
+.confirm-button {
+  width: 100%;
+  border: 2px solid #171717;
+  background: #171717;
+  color: #f2f0e9;
+  padding: 1rem;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.pledge-card button:hover,
+.confirm-button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.pledge-card-link {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+.pledge-card-link:hover {
+  color: inherit;
+}
+
+.pledge-card {
+  cursor: pointer;
+}
+
+.pledge-page {
+  min-height: 100vh;
+  padding: 2rem 5vw 8rem;
+}
+
+.pledge-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 2rem;
+  border-bottom: 2px solid #171717;
+}
+
+.logo-link,
+.back-link {
+  color: inherit;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+}
+
+.logo-link {
+  font-weight: 500;
+}
+
+.back-link:hover,
+.logo-link:hover {
+  text-decoration: underline;
+}
+
+.pledge-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 7rem;
+}
+
+.pledge-detail-icon {
+  font-size: 5rem;
+  margin-bottom: 3rem;
+}
+
+.pledge-detail h1 {
+  font-size: clamp(4rem, 11vw, 10rem);
+  line-height: 1;
+  letter-spacing: -0.08em;
+  margin: 0;
+}
+
+.pledge-detail h1 span {
+  -webkit-text-stroke: 2px #171717;
+  color: transparent;
+}
+
+.pledge-lead {
+  max-width: 650px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  margin: 4rem 0 7rem;
+}
+
+.news-story {
+  border-top: 2px solid #171717;
+  border-bottom: 2px solid #171717;
+  padding: 2rem 0 3rem;
+  margin-bottom: 7rem;
+}
+
+.news-label {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  margin-bottom: 3rem;
+}
+
+.news-story h2 {
+  max-width: 850px;
+  font-size: clamp(2rem, 5vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.05em;
+  margin: 0;
+}
+
+.news-date {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  margin-top: 1.5rem;
+}
+
+.news-summary {
+  max-width: 700px;
+  font-size: 1.15rem;
+  line-height: 1.6;
+  margin-top: 3rem;
+}
+
+.source-link {
+  display: inline-block;
+  color: inherit;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+  margin-top: 1rem;
+}
+
+.pledge-checkout {
+  border: 2px solid #171717;
+  padding: 3rem;
+  box-shadow: 10px 10px 0 #171717;
+}
+
+.price-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 2rem;
+  margin: 3rem 0;
+}
+
+.price-row h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+
+.price-row p {
+  max-width: 550px;
+  line-height: 1.5;
+}
+
+.price-row strong {
+  font-size: 4rem;
+  letter-spacing: -0.06em;
+}
+
+.pledge-button {
+  width: 100%;
+  border: 2px solid #171717;
+  background: #171717;
+  color: #f2f0e9;
+  padding: 1.25rem;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+}
+
+.pledge-button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+.checkout-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  margin-bottom: 0;
+}
+
+.not-found {
+  padding: 10vw 5vw;
+}
+
+.not-found h1 {
+  max-width: 900px;
+  font-size: clamp(3rem, 9vw, 8rem);
+  line-height: 1;
+  letter-spacing: -0.07em;
+}
+
+@media (max-width: 600px) {
+  .pledge-page {
+    padding: 1.25rem 1.25rem 5rem;
+  }
+
+  .pledge-nav {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .pledge-detail {
+    padding-top: 5rem;
+  }
+
+  .pledge-detail-icon {
+    font-size: 4rem;
+  }
+
+  .pledge-lead {
+    margin: 3rem 0 5rem;
+  }
+
+  .news-story {
+    margin-bottom: 5rem;
+  }
+
+  .news-label {
+    gap: 1rem;
+    flex-direction: column;
+  }
+
+  .pledge-checkout {
+    padding: 1.5rem;
+    box-shadow: 6px 6px 0 #171717;
+  }
+
+  .price-row {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .price-row strong {
+    font-size: 3rem;
+  }
+}
+
+.story-cta {
+  display: block;
+  margin-top: 0.75rem;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+}
+
+
+@media (max-width: 900px) {
+  .pledge-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .hero {
+    min-height: 80vh;
+    padding: 2rem 1.25rem;
+  }
+
+  .hero-stats {
+    gap: 2rem;
+    margin-top: 3rem;
+  }
+
+  .pledges {
+    padding: 5rem 1.25rem;
+  }
+
+  .pledge-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pledge-card {
+    min-height: 500px;
+  }
+
+  .modal {
+    padding: 2rem 1.5rem;
+  }
+}
+
+.pledge-story h4 {
+  font-size: 1rem;
+  line-height: 1.2;
+  margin: 0.6rem 0;
+}
+
+.pledge-story a {
+  color: inherit;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+}
+
+.pledge-story a:hover {
+  text-decoration-thickness: 2px;
+}
+
+.page-transition {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: #171717;
+  color: #f2f0e9;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  transform: scaleY(0);
+  transform-origin: bottom;
+}
+
+.page-transition.is-visible {
+  animation: moralStamp 650ms cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+.page-transition span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  opacity: 0;
+  animation: commitmentText 650ms ease forwards;
+  animation-delay: 100ms;
+}
+
+@keyframes moralStamp {
+  0% {
+    transform: scaleY(0);
+  }
+
+  35% {
+    transform: scaleY(1);
+  }
+
+  65% {
+    transform: scaleY(1);
+  }
+
+  100% {
+    transform: scaleY(0);
+    transform-origin: top;
+  }
+}
+
+@keyframes commitmentText {
+  0% {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  30% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  65% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
