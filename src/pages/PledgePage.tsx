@@ -45,7 +45,7 @@ const [selectedLevelId, setSelectedLevelId] = useState(
   setError('')
 
   try {
-    const functionUrl = import.meta.env.DEV
+    const _functionUrl = import.meta.env.DEV
   ? 'http://localhost:8888/.netlify/functions/create-checkout'
   : '/.netlify/functions/create-checkout'
 
