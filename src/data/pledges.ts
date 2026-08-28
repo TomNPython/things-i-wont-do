@@ -1,117 +1,180 @@
-export type NewsStory = {
-  headline: string
-  publication: string
-  publishedAt: string
-  summary: string
-  sourceUrl: string
-  sourceLabel: string
+export type PledgeLevel = {
+  id: 'minimum-wage' | 'decent-salary' | 'generous-employer'
+  amount: number
+  name: string
+  tagline: string
+  description: string
+  certificateTitle: string
 }
 
 export type Pledge = {
   id: string
   icon: string
   title: string
-  amount: number
-  currency: 'gbp'
+  category: string
   description: string
-  category: 'environment' | 'society' | 'workplace' | 'general'
-  news?: NewsStory
+  news?: {
+    headline: string
+    publication: string
+    publishedAt: string
+    summary: string
+    sourceUrl: string
+    sourceLabel: string
+    payouts: string
+  }
+  currency: string
+  levels: PledgeLevel[]
 }
 
 export const pledges: Pledge[] = [
   {
-    id: 'pollute-ocean',
-    icon: '🌊',
-    title: 'Pollute the ocean',
-    amount: 5,
-    category: 'environment',
-    description:
-      "I will not casually turn the world's oceans into a convenient place to put things I don't want anymore.",
-    news: {
-      headline: 'Millions of plastic pellets wash up on the North East coast',
-      publication: 'BBC News',
-      publishedAt: '14 August 2026',
-      summary:
-        'Millions of plastic pellets, known as nurdles, washed onto beaches in north-east England after a collision at the Port of Tyne. Environmental groups warned that tides could spread the pollution further.',
-      sourceUrl:
-        'https://www.bbc.co.uk/news/articles/c3ek2eyzvx7o',
-      sourceLabel: 'Read the BBC story',
+  id: 'pollute-ocean',
+  icon: '🌊',
+  title: 'Destroy the ocean',
+  category: 'environment',
+  description:
+    "I won't spill millions of gallons of oil into the sea, destroy marine ecosystems, and cause one of the world's worst environmental catastrophes.",
+  news: {
+    headline: 'Deepwater Horizon oil spill',
+    publication: 'BBC',
+    publishedAt: '20 April 2010',
+    summary:
+      'The Deepwater Horizon disaster began when an explosion killed 11 workers and triggered an 87-day oil spill in the Gulf of Mexico. The BP-operated well became one of the largest marine oil spills in history and caused extensive environmental and economic damage.',
+    sourceUrl:
+      'https://www.bbc.co.uk/news/articles/c3ek2eyzvx7o',
+    sourceLabel: 'Read the BBC story',
+    payouts: "In the year following the incident, Deepwater's CEO was paid..."
+  },
+  currency: 'gbp',
+  levels: [
+    {
+      id: 'minimum-wage',
+      amount: 1,
+      name: 'MINIMUM WAGE',
+      tagline: "I'll try my best.",
+      description:
+        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
+      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
     },
-    currency: 'gbp',
-  },
-
-  {
-    id: 'private-jet',
-    icon: '✈️',
-    title: 'Fly around in a private jet',
-    amount: 2,
-    category: 'environment',
-    description:
-      'I will not require an aircraft the size of a small house to transport myself somewhere I could have travelled normally.',
-    news: {
-      headline: 'How FIFA president Gianni Infantino is jetting around',
-      publication: 'BBC Sport / BBC Verify',
-      publishedAt: '2026',
-      summary:
-        'BBC Sport and BBC Verify tracked a private jet linked to FIFA president Gianni Infantino during the 2026 World Cup and identified 27 flights during the group stage, with an estimated climate impact of around 516 tonnes of CO₂e.',
-      sourceUrl:
-        'https://www.bbc.co.uk/sport/football/articles/cgev5wy0zg3o',
-      sourceLabel: 'Read the BBC investigation',
+    {
+      id: 'decent-salary',
+      amount: 2,
+      name: 'DECENT SALARY',
+      tagline: "I'm definitely not doing it.",
+      description:
+        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
+      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
     },
-    currency: 'gbp',
-  },
-
-  {
-    id: 'dog-poo',
-    icon: '🐕',
-    title: "Leave my dog's poo outside your house",
-    amount: 1,
-    category: 'society',
-    description:
-      "I will pick it up. This should not be considered an act of exceptional civic virtue, but here we are.",
-    news: {
-      headline: 'Highland Council issues just three dog fouling fines in five years',
-      publication: 'BBC Scotland',
-      publishedAt: '21 April 2026',
-      summary:
-        'A BBC Scotland investigation found that just three dog-fouling fines had been issued in the Highlands over five years, generating £240 in penalties.',
-      sourceUrl:
-        'https://www.bbc.co.uk/news/articles/cly3m9j1xvpo',
-      sourceLabel: 'Read the BBC story',
+    {
+      id: 'generous-employer',
+      amount: 5,
+      name: 'GENEROUS EMPLOYER',
+      tagline: "I'd rather die!",
+      description:
+        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
+      certificateTitle:
+        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
     },
-    currency: 'gbp',
+  ],
+},
+{
+  id: 'private-jet',
+  icon: '✈️',
+  title: 'Fly by private jet',
+  category: 'environment',
+  description:
+    "I won't fly around the world on a private jet, making regular trips that could have been done in a far less harmful way, purely for my own convenience.",
+  news: {
+    headline: '27 flights, 24 matches',
+    publication: 'BBC',
+    publishedAt: '28 June 2026',
+    summary:
+      "Fifa president Gianni Infantino has attended 24 matches in just over two weeks all across North America at this summer's World Cup, clocking up thousands of air miles.",
+    sourceUrl:
+      'https://www.bbc.co.uk/sport/football/articles/cgev5wy0zg3o',
+    sourceLabel: 'Read the BBC story',
+    payouts: "Gianni Infantino is estimated to have made..."
   },
-
-  {
-    id: 'toxic-waste',
-    icon: '🏭',
-    title: 'Dump toxic waste somewhere',
-    amount: 5,
-    category: 'environment',
-    description:
-      'I will not dispose of hazardous substances somewhere that definitely was not designed to contain them.',
-    news: {
-      headline: 'Buried: the toxic chemical legacy in Wales',
-      publication: 'BBC',
-      publishedAt: '2026',
-      summary:
-        'The BBC investigation Buried follows claims surrounding decades of toxic chemical dumping in South Wales and the work of environmental whistleblower Douglas Gowan.',
-      sourceUrl:
-        'https://www.bbc.co.uk/iplayer',
-      sourceLabel: 'Watch Buried on BBC iPlayer',
+  currency: 'gbp',
+  levels: [
+    {
+      id: 'minimum-wage',
+      amount: 1,
+      name: 'MINIMUM WAGE',
+      tagline: "I'll try my best.",
+      description:
+        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
+      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
     },
-    currency: 'gbp',
+    {
+      id: 'decent-salary',
+      amount: 2,
+      name: 'DECENT SALARY',
+      tagline: "I'm definitely not doing it.",
+      description:
+        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
+      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
+    },
+    {
+      id: 'generous-employer',
+      amount: 5,
+      name: 'GENEROUS EMPLOYER',
+      tagline: "I'd rather die!",
+      description:
+        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
+      certificateTitle:
+        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
+    },
+  ],
+},
+{
+  id: 'factory-emissions',
+  icon: '🏭',
+  title: 'Break emissions regulations',
+  category: 'environment',
+  description:
+    "I won't deliberately install software devices that flout globally agreed upon emissions regulations in order to sell more cars.",
+  news: {
+    headline: 'Volkswagen: The Diesel Dupe',
+    publication: 'BBC',
+    publishedAt: '10 December 2015',
+    summary:
+      'Many VW cars being sold in America had a "defeat device" - or software - in diesel engines that could detect when they were being tested, changing the performance accordingly to improve results.',
+    sourceUrl:
+      'https://www.bbc.co.uk/news/business-34324772',
+    sourceLabel: 'Read the BBC story',
+    payouts: "In the year following the incident, Volkswagen's CEO was paid..."
   },
-
-  {
-    id: 'office-lunch',
-    icon: '🥪',
-    title: "Steal someone's lunch from the office fridge",
-    amount: 1,
-    category: 'workplace',
-    description:
-      'I will not see a clearly labelled sandwich and interpret that as an invitation.',
-    currency: 'gbp',
-
-  },
+  currency: 'gbp',
+  levels: [
+    {
+      id: 'minimum-wage',
+      amount: 1,
+      name: 'MINIMUM WAGE',
+      tagline: "I'll try my best.",
+      description:
+        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
+      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
+    },
+    {
+      id: 'decent-salary',
+      amount: 2,
+      name: 'DECENT SALARY',
+      tagline: "I'm definitely not doing it.",
+      description:
+        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
+      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
+    },
+    {
+      id: 'generous-employer',
+      amount: 5,
+      name: 'GENEROUS EMPLOYER',
+      tagline: "I'd rather die!",
+      description:
+        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
+      certificateTitle:
+        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
+    },
+  ],
+},
 ]

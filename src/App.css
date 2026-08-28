@@ -29,8 +29,8 @@ main {
 }
 
 .hero {
-  min-height: 90vh;
-  padding: 5vw;
+  min-height: 80vh;
+  padding: 3vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -46,7 +46,7 @@ main {
 }
 
 .hero h1 {
-  font-size: clamp(5rem, 15vw, 13rem);
+  font-size: clamp(4rem, 10vw, 9rem);
   line-height: 1;
   letter-spacing: -0.08em;
   margin: 0;
@@ -60,15 +60,28 @@ main {
 
 .hero-copy {
   max-width: 520px;
-  margin: 3rem auto 0 auto;
-  font-size: clamp(1.2rem, 2vw, 1.7rem);
-  line-height: 1.3;
+  margin: 2rem auto 0 auto;
+  font-size: clamp(1rem, 1.4vw, 1.3rem);
+  line-height: 1.2;
+}
+
+.hero-copy strong {
+  font-size: 1.6rem;
+}
+
+.hero-copy.last {
+  margin-top: 4rem;
+  margin-bottom: 0;
+}
+
+.hero-small {
+  font-size: 0.8rem;
 }
 
 .hero-stats {
   display: flex;
   gap: 4rem;
-  margin: 5rem auto 0 auto;
+  margin: 2rem auto 1rem auto;
   font-family: 'DM Mono', monospace;
 }
 
@@ -88,12 +101,12 @@ main {
 }
 
 .pledges {
-  padding: 4rem 5vw;
+  padding: 1rem 1vw;
 }
 
 .section-heading {
   max-width: 700px;
-  margin: 5rem auto 0 auto;
+  margin: 3rem auto 0 auto;
 }
 
 .section-heading h2 {
@@ -103,7 +116,14 @@ main {
   margin: 0 auto 2rem auto;
 }
 
-.section-heading > p:last-child {
+.section-heading h3 {
+  font-size: clamp(2rem, 5vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin: 0 auto 2rem auto;
+}
+
+.section-heading > p {
   font-size: 1.2rem;
   line-height: 1.5;
   margin-bottom: 2rem;
@@ -117,8 +137,7 @@ main {
 
 .pledge-card {
   border: 2px solid #171717;
-  padding: 2rem;
-  min-height: 560px;
+  padding: 1rem;
   display: flex;
   flex-direction: column;
   background: #f2f0e9;
@@ -144,19 +163,38 @@ main {
 
 .pledge-card h3 {
   font-size: 2rem;
-  line-height: 1;
+  line-height: 1.2;
   letter-spacing: -0.04em;
-  margin: 0.5rem 0 1.5rem;
+  margin: 0rem 0 1.5rem;
 }
 
 .pledge-description {
   line-height: 1.5;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
 }
 
 .pledge-story {
   border-top: 1px solid #171717;
   margin-top: auto;
-  padding-top: 1rem;
+  padding-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+.pledge-story .pledge-story-meta {
+  font-size: 0.8rem;
+  margin-bottom: 0.5rem;
+}
+
+.pledge-story-label {
+  margin-bottom: 1rem;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+}
+
+.pledge-story-label.last {
+  margin-bottom: 0rem;
+  margin-top: 1rem;
 }
 
 .pledge-story span {
@@ -170,13 +208,15 @@ main {
 }
 
 .pledge-card button,
-.confirm-button {
+.confirm-button, 
+.card-button {
   width: 100%;
   border: 2px solid #171717;
   background: #171717;
   color: #f2f0e9;
   padding: 1rem;
   cursor: pointer;
+  text-decoration: none;
   font-family: 'DM Mono', monospace;
   font-size: 0.75rem;
   transition:
@@ -200,8 +240,9 @@ main {
   color: inherit;
 }
 
-.pledge-card {
-  cursor: pointer;
+.pledge-card-footer {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .pledge-page {
@@ -233,21 +274,31 @@ main {
 .logo-link:hover {
   text-decoration: underline;
 }
-
 .pledge-detail {
-  max-width: 1000px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding-top: 7rem;
+  padding-top: 4rem;
+}
+
+.pledge-header {
+  display: grid;
+  grid-template-columns: minmax(0, 1.1fr) minmax(380px, 0.9fr);
+  gap: 5rem;
+  align-items: start;
+}
+
+.pledge-information {
+  min-width: 0;
 }
 
 .pledge-detail-icon {
-  font-size: 5rem;
-  margin-bottom: 3rem;
+  font-size: 4rem;
+  margin-bottom: 2rem;
 }
 
 .pledge-detail h1 {
-  font-size: clamp(4rem, 11vw, 10rem);
-  line-height: 1;
+  font-size: clamp(3rem, 4vw, 4rem);
+  line-height: 0.9;
   letter-spacing: -0.08em;
   margin: 0;
 }
@@ -257,18 +308,176 @@ main {
   color: transparent;
 }
 
+.pledge-copy {
+  margin-top: 3rem;
+}
+
 .pledge-lead {
   max-width: 650px;
-  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  font-size: 1.2rem;
+  line-height: 1.5;
+  margin: 0;
+  margin-bottom: 2rem;
+}
+
+.responsibilities {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #171717;
+  max-width: 650px;
+}
+
+.responsibilities ul {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
+}
+
+.responsibilities li {
+  margin-bottom: 0.65rem;
   line-height: 1.4;
-  margin: 4rem 0 7rem;
+}
+
+.pledge-selection {
+  border: 2px solid #171717;
+  padding: 1.5rem;
+  box-shadow: 8px 8px 0 #171717;
+}
+
+.pledge-selection h2 {
+  font-size: clamp(2rem, 3vw, 3rem);
+  line-height: 0.95;
+  letter-spacing: -0.06em;
+  margin: 0 0 1.5rem;
+}
+
+.salary-intro {
+  line-height: 1.5;
+  margin: 0 0 1.5rem;
+}
+
+.salary-intro strong {
+  display: block;
+  margin-top: 0.5rem;
+}
+
+.pledge-levels {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.pledge-level {
+  width: 100%;
+  border: 2px solid #171717;
+  background: transparent;
+  color: #171717;
+  padding: 1rem;
+  text-align: left;
+  cursor: pointer;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 1rem;
+  row-gap: 0.25rem;
+  transition:
+    background 150ms ease,
+    color 150ms ease,
+    transform 150ms ease;
+}
+
+.pledge-level:hover {
+  background: #171717;
+  color: #f2f0e9;
+  transform: translate(-2px, -2px);
+}
+
+.pledge-level.is-selected {
+  background: #171717;
+  color: #f2f0e9;
+  transform: translate(-2px, -2px);
+  box-shadow: 4px 4px 0 #171717;
+}
+
+.pledge-level.is-selected:hover {
+  background: #171717;
+  color: #f2f0e9;
+}
+
+.pledge-level.is-selected::after {
+  content: '✓ SELECTED';
+  grid-column: 2;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 0.08em;
+  margin-top: 0.5rem;
+}
+
+.pledge-level-amount {
+  grid-row: span 3;
+  font-family: 'DM Mono', monospace;
+  font-size: 1.4rem;
+  font-weight: 500;
+  align-self: center;
+}
+
+.pledge-level-name {
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.pledge-level-tagline {
+  font-size: 0.8rem;
+  line-height: 1.3;
+}
+
+.pledge-level-certificate {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.6rem;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.pledge-button {
+  width: 100%;
+  border: 2px solid #171717;
+  background: #171717;
+  color: #f2f0e9;
+  padding: 1.25rem;
+  margin-top: 1rem;
+  cursor: pointer;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.8rem;
+  transition:
+    background 150ms ease,
+    color 150ms ease;
+}
+
+.pledge-button:hover:not(:disabled) {
+  background: transparent;
+  color: #171717;
+}
+
+.pledge-button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+
+.checkout-note {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  line-height: 1.5;
+  margin: 1rem 0 0;
+}
+
+.checkout-error {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
 }
 
 .news-story {
   border-top: 2px solid #171717;
   border-bottom: 2px solid #171717;
   padding: 2rem 0 3rem;
-  margin-bottom: 7rem;
+  margin-top: 7rem;
 }
 
 .news-label {
@@ -308,60 +517,6 @@ main {
   font-size: 0.75rem;
   margin-top: 1rem;
 }
-
-.pledge-checkout {
-  border: 2px solid #171717;
-  padding: 3rem;
-  box-shadow: 10px 10px 0 #171717;
-}
-
-.price-row {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  gap: 2rem;
-  margin: 3rem 0;
-}
-
-.price-row h2 {
-  font-size: clamp(2.5rem, 6vw, 5rem);
-  letter-spacing: -0.06em;
-  margin: 0;
-}
-
-.price-row p {
-  max-width: 550px;
-  line-height: 1.5;
-}
-
-.price-row strong {
-  font-size: 4rem;
-  letter-spacing: -0.06em;
-}
-
-.pledge-button {
-  width: 100%;
-  border: 2px solid #171717;
-  background: #171717;
-  color: #f2f0e9;
-  padding: 1.25rem;
-  cursor: pointer;
-  font-family: 'DM Mono', monospace;
-  font-size: 0.8rem;
-}
-
-.pledge-button:hover {
-  background: transparent;
-  color: #171717;
-}
-
-.checkout-note {
-  font-family: 'DM Mono', monospace;
-  font-size: 0.65rem;
-  line-height: 1.5;
-  margin-bottom: 0;
-}
-
 .not-found {
   padding: 10vw 5vw;
 }
@@ -383,26 +538,73 @@ main {
     gap: 1rem;
   }
 
+ @media (max-width: 600px) {
+  .pledge-page {
+    padding: 1.25rem 1.25rem 5rem;
+  }
+
+  .pledge-nav {
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
   .pledge-detail {
-    padding-top: 5rem;
+    padding-top: 3rem;
+  }
+
+  .pledge-header {
+    grid-template-columns: 1fr;
+    gap: 3rem;
   }
 
   .pledge-detail-icon {
-    font-size: 4rem;
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .pledge-detail h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+  }
+
+  .pledge-copy {
+    margin-top: 2rem;
   }
 
   .pledge-lead {
-    margin: 3rem 0 5rem;
+    font-size: 1.05rem;
+  }
+
+  .responsibilities {
+    margin-top: 2rem;
+  }
+
+  .pledge-selection {
+    padding: 1.25rem;
+    box-shadow: 6px 6px 0 #171717;
+  }
+
+  .pledge-selection h2 {
+    font-size: 2.5rem;
+  }
+
+  .pledge-level {
+    padding: 0.9rem;
+  }
+
+  .pledge-level-amount {
+    font-size: 1.2rem;
   }
 
   .news-story {
-    margin-bottom: 5rem;
+    margin-top: 5rem;
   }
 
   .news-label {
     gap: 1rem;
     flex-direction: column;
+    margin-bottom: 2rem;
   }
+}
 
   .pledge-checkout {
     padding: 1.5rem;
@@ -422,6 +624,7 @@ main {
 .story-cta {
   display: block;
   margin-top: 0.75rem;
+  margin-bottom: 1rem;
   font-family: 'DM Mono', monospace;
   font-size: 0.7rem;
 }
@@ -453,7 +656,7 @@ main {
   }
 
   .pledge-card {
-    min-height: 500px;
+    min-height: 300px;
   }
 
   .modal {
@@ -541,5 +744,193 @@ main {
 
   100% {
     opacity: 0;
+  }
+}
+
+/* Success Page */
+.success-page {
+  min-height: 100vh;
+  padding: 2rem 5vw 6rem;
+}
+
+.success-content {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding-top: 6rem;
+}
+
+.success-icon {
+  font-size: 4rem;
+  margin-bottom: 2rem;
+}
+
+.success-content h1 {
+  font-size: clamp(4rem, 10vw, 9rem);
+  line-height: 0.9;
+  letter-spacing: -0.08em;
+  margin: 0;
+}
+
+.success-content h1 span {
+  -webkit-text-stroke: 2px #171717;
+  color: transparent;
+}
+
+.success-lead {
+  max-width: 650px;
+  font-size: clamp(1.2rem, 2vw, 1.6rem);
+  line-height: 1.4;
+  margin: 3rem auto 5rem auto;
+}
+
+.success-card {
+  position: relative;
+  border: 2px solid #171717;
+  padding: 2rem;
+  box-shadow: 10px 10px 0 #171717;
+  margin-bottom: 5rem;
+}
+
+.success-card-header {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #171717;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.success-job {
+  padding: 3rem 0;
+  border-bottom: 1px solid #171717;
+}
+
+.success-job .eyebrow {
+  margin-bottom: 1rem;
+}
+
+.success-job h2 {
+  font-size: clamp(2.5rem, 6vw, 5rem);
+  line-height: 1;
+  letter-spacing: -0.06em;
+  margin: 0;
+}
+
+.success-details {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 2rem 0;
+}
+
+.success-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.success-details span {
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+}
+
+.success-details strong {
+  font-size: 1rem;
+}
+
+.success-stamp {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 110px;
+  height: 110px;
+  border: 2px solid #171717;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transform: rotate(-8deg);
+  font-family: 'DM Mono', monospace;
+  font-size: 0.65rem;
+  text-align: center;
+}
+
+.success-stamp span {
+  font-size: 1.5rem;
+  margin-bottom: 0.25rem;
+}
+
+.success-message {
+  max-width: 600px;
+  margin: 0 auto 3rem auto;
+}
+
+.success-message p:not(.eyebrow) {
+  font-size: 1.1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+}
+
+.success-button {
+  display: inline-block;
+  border: 2px solid #171717;
+  background: #171717;
+  color: #f2f0e9;
+  padding: 1.25rem 1.5rem;
+  text-decoration: none;
+  font-family: 'DM Mono', monospace;
+  font-size: 0.75rem;
+}
+
+.success-button:hover {
+  background: transparent;
+  color: #171717;
+}
+
+@media (max-width: 600px) {
+  .success-page {
+    padding: 1.25rem 1.25rem 5rem;
+  }
+
+  .success-content {
+    padding-top: 4rem;
+  }
+
+  .success-content h1 {
+    font-size: clamp(3.5rem, 17vw, 6rem);
+  }
+
+  .success-lead {
+    margin: 2rem 0 4rem;
+  }
+
+  .success-card {
+    padding: 1.25rem;
+    box-shadow: 6px 6px 0 #171717;
+    margin-bottom: 4rem;
+  }
+
+  .success-job {
+    padding: 2rem 0;
+  }
+
+  .success-details {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding-bottom: 8rem;
+  }
+
+  .success-stamp {
+    right: 1.25rem;
+    bottom: 1.25rem;
+    width: 90px;
+    height: 90px;
+  }
+
+  .success-button {
+    width: 100%;
+    text-align: center;
   }
 }
