@@ -1,10 +1,19 @@
+export type PledgeLevelId =
+  | 'minimum-wage'
+  | 'decent-salary'
+  | 'generous-employer'
+
 export type PledgeLevel = {
-  id: 'minimum-wage' | 'decent-salary' | 'generous-employer'
+  id: PledgeLevelId
   amount: number
   name: string
   tagline: string
   description: string
   certificateTitle: string
+  certificate: {
+    employeeStatus: string
+    employerStatus: string
+  }
 }
 
 export type Pledge = {
@@ -26,6 +35,49 @@ export type Pledge = {
   levels: PledgeLevel[]
 }
 
+export const pledgeLevels: PledgeLevel[] = [
+  {
+    id: 'minimum-wage',
+    amount: 1,
+    name: 'MINIMUM WAGE',
+    tagline: "I'll try my best.",
+    description:
+      "A modest salary for an employee who promises not to cause an environmental catastrophe.",
+    certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
+    certificate: {
+      employeeStatus: 'Minimum Wage',
+      employerStatus: 'Basically Decent Person',
+    },
+  },
+  {
+    id: 'decent-salary',
+    amount: 2,
+    name: 'DECENT SALARY',
+    tagline: "I'm definitely not doing it.",
+    description:
+      'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
+    certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
+    certificate: {
+      employeeStatus: 'Decent Salary',
+      employerStatus: 'Kind-hearted soul',
+    },
+  },
+  {
+    id: 'generous-employer',
+    amount: 5,
+    name: 'GENEROUS EMPLOYER',
+    tagline: "I'd rather die!",
+    description:
+      'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
+    certificateTitle:
+      'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
+    certificate: {
+      employeeStatus: 'Crying in Waitrose',
+      employerStatus: 'Modern Saint',
+    },
+  },
+]
+
 export const pledges: Pledge[] = [
   {
   id: 'pollute-ocean',
@@ -46,41 +98,12 @@ export const pledges: Pledge[] = [
     payouts: "In the year following the incident, Deepwater's CEO was paid..."
   },
   currency: 'gbp',
-  levels: [
-    {
-      id: 'minimum-wage',
-      amount: 1,
-      name: 'MINIMUM WAGE',
-      tagline: "I'll try my best.",
-      description:
-        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
-      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
-    },
-    {
-      id: 'decent-salary',
-      amount: 2,
-      name: 'DECENT SALARY',
-      tagline: "I'm definitely not doing it.",
-      description:
-        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
-      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
-    },
-    {
-      id: 'generous-employer',
-      amount: 5,
-      name: 'GENEROUS EMPLOYER',
-      tagline: "I'd rather die!",
-      description:
-        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
-      certificateTitle:
-        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
-    },
-  ],
+  levels: pledgeLevels
 },
 {
   id: 'private-jet',
   icon: '✈️',
-  title: 'Fly by private jet',
+  title: 'Commute by private jet',
   category: 'environment',
   description:
     "I won't fly around the world on a private jet, making regular trips that could have been done in a far less harmful way, purely for my own convenience.",
@@ -96,39 +119,10 @@ export const pledges: Pledge[] = [
     payouts: "Gianni Infantino is estimated to have made..."
   },
   currency: 'gbp',
-  levels: [
-    {
-      id: 'minimum-wage',
-      amount: 1,
-      name: 'MINIMUM WAGE',
-      tagline: "I'll try my best.",
-      description:
-        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
-      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
-    },
-    {
-      id: 'decent-salary',
-      amount: 2,
-      name: 'DECENT SALARY',
-      tagline: "I'm definitely not doing it.",
-      description:
-        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
-      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
-    },
-    {
-      id: 'generous-employer',
-      amount: 5,
-      name: 'GENEROUS EMPLOYER',
-      tagline: "I'd rather die!",
-      description:
-        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
-      certificateTitle:
-        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
-    },
-  ],
+  levels: pledgeLevels
 },
 {
-  id: 'factory-emissions',
+  id: 'car-emissions',
   icon: '🏭',
   title: 'Break emissions regulations',
   category: 'environment',
@@ -146,35 +140,6 @@ export const pledges: Pledge[] = [
     payouts: "In the year following the incident, Volkswagen's CEO was paid..."
   },
   currency: 'gbp',
-  levels: [
-    {
-      id: 'minimum-wage',
-      amount: 1,
-      name: 'MINIMUM WAGE',
-      tagline: "I'll try my best.",
-      description:
-        "A modest salary for an employee who promises not to cause an environmental catastrophe.",
-      certificateTitle: 'CERTIFICATE OF BASIC DECENCY',
-    },
-    {
-      id: 'decent-salary',
-      amount: 2,
-      name: 'DECENT SALARY',
-      tagline: "I'm definitely not doing it.",
-      description:
-        'A respectable wage for an employee who intends to leave the oceans exactly where they found them.',
-      certificateTitle: 'CERTIFICATE OF SERIOUS MORAL INTENT',
-    },
-    {
-      id: 'generous-employer',
-      amount: 5,
-      name: 'GENEROUS EMPLOYER',
-      tagline: "I'd rather die!",
-      description:
-        'A generous salary for an employee who promises to keep catastrophic oil spills off their CV.',
-      certificateTitle:
-        'CERTIFICATE OF EXEMPLARY EMPLOYERSHIP',
-    },
-  ],
+  levels: pledgeLevels
 },
 ]

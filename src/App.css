@@ -3,7 +3,7 @@
 :root {
   font-family: 'Space Grotesk', sans-serif;
   color: #171717;
-  background: #f2f0e9;
+  background: #ffffff;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
 }
@@ -41,7 +41,7 @@ main {
   font-family: 'DM Mono', monospace;
   font-size: 0.72rem;
   letter-spacing: 0.12em;
-  margin: 0 0 1.5rem;
+  margin: 0 0 1rem;
   text-transform: uppercase;
 }
 
@@ -136,23 +136,29 @@ main {
 }
 
 .pledge-card {
-  border: 2px solid #171717;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   padding: 1rem;
   display: flex;
   flex-direction: column;
-  background: #f2f0e9;
+  background: #ffffff;
   transition:
     transform 180ms ease,
     box-shadow 180ms ease;
 }
 
 .pledge-card:hover {
-  transform: translate(-5px, -5px);
-  box-shadow: 8px 8px 0 #171717;
+  transform: translate(0px, -5px);
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
 }
 
 .pledge-icon {
   font-size: 3rem;
+}
+
+.pledge-icon img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 4px;
 }
 
 .pledge-amount {
@@ -175,9 +181,7 @@ main {
 }
 
 .pledge-story {
-  border-top: 1px solid #171717;
   margin-top: auto;
-  padding-top: 2rem;
   margin-bottom: 0.5rem;
 }
 
@@ -195,6 +199,8 @@ main {
 .pledge-story-label.last {
   margin-bottom: 0rem;
   margin-top: 1rem;
+  font-size: 1.5rem;
+  font-style: strong;
 }
 
 .pledge-story span {
@@ -277,7 +283,7 @@ main {
 .pledge-detail {
   max-width: 1200px;
   margin: 0 auto;
-  padding-top: 4rem;
+  padding-top: 2rem;
 }
 
 .pledge-header {
@@ -293,7 +299,13 @@ main {
 
 .pledge-detail-icon {
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.pledge-detail-icon img {
+  width: 100%;
+  border-radius: 4px;
+  margin-top: 1rem;
 }
 
 .pledge-detail h1 {
@@ -309,7 +321,7 @@ main {
 }
 
 .pledge-copy {
-  margin-top: 3rem;
+  margin-top: 1rem;
 }
 
 .pledge-lead {
@@ -317,7 +329,7 @@ main {
   font-size: 1.2rem;
   line-height: 1.5;
   margin: 0;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .responsibilities {
@@ -338,9 +350,8 @@ main {
 }
 
 .pledge-selection {
-  border: 2px solid #171717;
   padding: 1.5rem;
-  box-shadow: 8px 8px 0 #171717;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 
 .pledge-selection h2 {
@@ -393,7 +404,6 @@ main {
   background: #171717;
   color: #f2f0e9;
   transform: translate(-2px, -2px);
-  box-shadow: 4px 4px 0 #171717;
 }
 
 .pledge-level.is-selected:hover {
@@ -435,8 +445,13 @@ main {
   margin-top: 0.25rem;
 }
 
+.certificate-section {
+  margin-bottom: 1rem;
+}
+
 .pledge-button {
   width: 100%;
+  max-width: 400px;
   border: 2px solid #171717;
   background: #171717;
   color: #f2f0e9;
@@ -756,16 +771,21 @@ main {
 .success-content {
   max-width: 1000px;
   margin: 0 auto;
-  padding-top: 6rem;
+  padding-top: 4rem;
 }
 
 .success-icon {
   font-size: 4rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
+}
+
+.success-icon img {
+  max-width: 300px;
+  margin-top: 1rem;
 }
 
 .success-content h1 {
-  font-size: clamp(4rem, 10vw, 9rem);
+  font-size: clamp(3rem, 7vw, 6rem);
   line-height: 0.9;
   letter-spacing: -0.08em;
   margin: 0;
@@ -780,14 +800,13 @@ main {
   max-width: 650px;
   font-size: clamp(1.2rem, 2vw, 1.6rem);
   line-height: 1.4;
-  margin: 3rem auto 5rem auto;
+  margin: 2rem auto 3rem auto;
 }
 
 .success-card {
   position: relative;
-  border: 2px solid #171717;
   padding: 2rem;
-  box-shadow: 10px 10px 0 #171717;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   margin-bottom: 5rem;
 }
 
@@ -933,4 +952,16 @@ main {
     width: 100%;
     text-align: center;
   }
+}
+
+.certificate {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.certificate svg {
+  display: block;
+  width: 100%;
+  height: auto;
 }

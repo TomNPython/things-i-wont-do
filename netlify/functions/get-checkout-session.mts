@@ -1,4 +1,5 @@
 import Stripe from 'stripe'
+import { pledges } from '../../src/data/pledges'
 
 export default async (request: Request) => {
   if (request.method !== 'GET') {
@@ -50,16 +51,55 @@ export default async (request: Request) => {
       )
     }
 
+    const pledgeId = session.metadata?.pledgeId
+    const levelId = session.metadata?.levelId
+
+    const pledge = pledges.find(
+      (item) => item.id === pledgeId,
+    )
+
+    if (!pledge) {
+      return new Response(
+        JSON.stringify({
+          error: 'Pledge associated with this payment was not found',
+        }),
+        {
+          status: 404,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        },
+      )
+    }
+
+    const level = pledge.levels.find(
+      (item) => item.id === levelId,
+    )
+
+    if (!level) {
+      return new Response(
+        JSON.stringify({
+          error: 'Pledge level associated with this payment was not found',
+        }),
+        {
+          status: 404,
+          headers: {
+            'Content-Type': 'application/json',
+          },
+        },
+      )
+    }
+
     return new Response(
       JSON.stringify({
         success: true,
-        pledgeId: session.metadata?.pledgeId,
-        levelId: session.metadata?.levelId,
-        levelName: session.metadata?.levelName,
-        certificateTitle:
-          session.metadata?.certificateTitle,
+        pledgeId: pledge.id,
+        levelId: level.id,
+        levelName: level.name,
+        certificateTitle: level.certificateTitle,
         amount: session.amount_total,
         currency: session.currency,
+        name: session.customer_details?.name ?? null,
       }),
       {
         status: 200,

@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react'
 import { Link, useParams, useSearchParams } from 'react-router-dom'
 import { jsPDF } from 'jspdf'
 import { pledges } from '../data/pledges'
+import Certificate from '../components/Certificate'
+
 
 type PaymentDetails = {
   pledgeId: string
@@ -10,6 +12,7 @@ type PaymentDetails = {
   certificateTitle: string
   amount: number
   currency: string
+  name: string
 }
 
 function SuccessPage() {
@@ -119,6 +122,32 @@ function SuccessPage() {
     style: 'currency',
     currency: payment.currency || 'GBP',
   }).format((payment.amount || 0) / 100)
+
+  const selectedLevel = pledge.levels.find(
+  (level) => level.id === payment.levelId
+)
+
+if (!selectedLevel) {
+  return (
+    <main className="success-page">
+      <p className="eyebrow">PAYMENT VERIFICATION</p>
+
+      <h1>
+        SOMETHING WENT
+        <br />
+        <span>WRONG.</span>
+      </h1>
+
+      <p className="success-lead">
+        We couldn't match your payment to a pledge level.
+      </p>
+
+      <Link to="/" className="back-link">
+        ← BACK TO ALL PLEDGES
+      </Link>
+    </main>
+  )
+}
 
   const shareText =
     `I am now officially a good boss. I paid someone not to destroy the ocean. ${amount} well spent.`
@@ -239,38 +268,13 @@ function SuccessPage() {
           not to do something terrible.
         </p>
 
-        <div className="success-card">
-          <div className="success-icon">
-            {pledge.icon}
-          </div>
-
-          <p className="eyebrow">
-            YOUR EMPLOYEE WILL NOT
-          </p>
-
-          <h2>
-            {pledge.title.toUpperCase()}.
-          </h2>
-
-          <div className="success-details">
-            <div>
-              <span>EMPLOYER STATUS</span>
-              <strong>{payment.levelName}</strong>
-            </div>
-
-            <div>
-              <span>SALARY</span>
-              <strong>{amount}</strong>
-            </div>
-
-            <div>
-              <span>CERTIFICATION</span>
-              <strong>
-                {payment.certificateTitle}
-              </strong>
-            </div>
-          </div>
-        </div>
+        {selectedLevel && (
+          <Certificate
+            pledge={pledge}
+            selectedLevel={selectedLevel}
+            name={payment.name || 'GOOD BOSS'}
+          />
+        )}
 
         <section className="certificate-section">
           <p className="eyebrow">

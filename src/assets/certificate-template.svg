@@ -1,0 +1,64 @@
+<svg width="3300" height="2550" viewBox="0 0 3300 2550" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Certificate Variable Names v2" clip-path="url(#clip0_2_112)">
+<rect width="3300" height="2550" fill="white"/>
+<rect id="frame 1" x="158" y="158" width="2984" height="2234" stroke="#990003" stroke-opacity="0.64" stroke-width="16"/>
+<rect id="frame 2" x="204" y="204" width="2892" height="2142" stroke="#990003" stroke-width="8"/>
+<g id="content">
+<text id="We certify that the bearer has agreed to take on an employee with the sole responsibility of not contributing to the destruction of the world and the degradation of human morality." fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="64" letter-spacing="0em"><tspan x="876.781" y="1302.77">We certify that the bearer has agreed to take on an </tspan><tspan x="801.781" y="1405.77">employee with the sole responsibility of not contributing </tspan><tspan x="833.5" y="1508.77">to the destruction of the world and the degradation of </tspan><tspan x="1410.25" y="1611.77">human morality.</tspan></text>
+<g id="Employee Status: {{EmployeeStatusDescription}} Salary: {{SalaryDescription}} Employer Status: {{EmployerStatusDescription}}">
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="48" font-weight="bold" letter-spacing="0em"><tspan x="1112" y="1992.18">Employee Status: {{EmployeeStatusDescription}}&#10;</tspan><tspan x="1112" y="2069.18">Salary: {{SalaryDescription}}&#10;</tspan><tspan x="1112" y="2146.18">Employer Status: {{EmployerStatusDescription}}</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="72" font-weight="bold" letter-spacing="0em"><tspan x="1112" y="1915.18">&#10;</tspan></text>
+</g>
+<g id="Pledge: {{PledgeDescription}}">
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="72" font-weight="bold" letter-spacing="0em"><tspan x="1265.12" y="1870.45">{{PledgeDescription}}&#10;</tspan><tspan x="1650.5" y="1990.45">&#10;</tspan></text>
+<text fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="48" font-weight="bold" letter-spacing="0em"><tspan x="1556.59" y="1750.45">Pledge: &#10;</tspan></text>
+</g>
+</g>
+<g id="header">
+<g id="Group 1">
+<text id="Certificate of Moral Employment" fill="black" style="white-space: pre" xml:space="preserve" font-family="Sirivennela" font-size="128" letter-spacing="0.1em"><tspan x="797.688" y="564.08">Certificate of Moral Employment</tspan></text>
+<text id="THINGS I WON&#226;&#128;&#153;T DO" fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="64" font-weight="300" letter-spacing="0.1em"><tspan x="1316.43" y="358.773">THINGS I WON&#x2019;T DO</tspan></text>
+<text id="This certificate is proudly presented to" fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="64" letter-spacing="0em"><tspan x="1066.25" y="760.773">This certificate is proudly presented to</tspan></text>
+<text id="In recognition of unusually decent management" fill="black" style="white-space: pre" xml:space="preserve" font-family="Inter" font-size="48" letter-spacing="0em"><tspan x="1112.21" y="2280.45">In recognition of unusually decent management</tspan></text>
+</g>
+</g>
+<text id="name" fill="#853133" style="white-space: pre" xml:space="preserve" font-family="Kaushan Script" font-size="280" letter-spacing="0em"><tspan x="1065.66" y="1089.38">{{NAME}}</tspan></text>
+<g id="Medal">
+<path id="Rectangle 150" d="M2603.67 2010.1L2658.43 2070.31L2567.76 2170L2558.24 2120.26L2513 2109.79L2603.67 2010.1Z" fill="#853133"/>
+<path id="Rectangle 150_2" d="M2749.33 2010.1L2694.57 2070.31L2785.24 2170L2794.76 2120.26L2840 2109.79L2749.33 2010.1Z" fill="#853133"/>
+<g id="Star 1" filter="url(#filter0_d_2_112)">
+<path d="M2676.05 1839L2690.32 1852.07L2706.89 1842.82L2718.16 1859.05L2736.17 1854.09L2743.88 1872.67L2762.45 1872.24L2766.19 1892.24L2784.39 1896.36L2783.99 1916.78L2800.9 1925.25L2796.38 1945.06L2811.14 1957.45L2802.73 1975.66L2814.62 1991.35L2802.73 2007.05L2811.14 2025.25L2796.38 2037.65L2800.9 2057.46L2783.99 2065.93L2784.39 2086.34L2766.19 2090.46L2762.45 2110.47L2743.88 2110.03L2736.17 2128.62L2718.16 2123.65L2706.89 2139.89L2690.32 2130.64L2676.05 2143.71L2661.78 2130.64L2645.22 2139.89L2633.95 2123.65L2615.93 2128.62L2608.23 2110.03L2589.66 2110.47L2585.91 2090.46L2567.72 2086.34L2568.11 2065.93L2551.21 2057.46L2555.72 2037.65L2540.96 2025.25L2549.37 2007.05L2537.49 1991.35L2549.37 1975.66L2540.96 1957.45L2555.72 1945.06L2551.21 1925.25L2568.11 1916.78L2567.72 1896.36L2585.91 1892.24L2589.66 1872.24L2608.23 1872.67L2615.93 1854.09L2633.95 1859.05L2645.22 1842.82L2661.78 1852.07L2676.05 1839Z" fill="#853133"/>
+</g>
+<path id="Ellipse 4" d="M2676.34 1862.03C2740.59 1862.03 2793.14 1919.38 2793.14 1990.75C2793.14 2062.11 2740.59 2119.47 2676.34 2119.47C2612.09 2119.47 2559.54 2062.11 2559.54 1990.75C2559.54 1919.38 2612.09 1862.03 2676.34 1862.03Z" fill="#FFD56A" stroke="#FFD56A" stroke-width="6"/>
+<path id="Ellipse 5" d="M2676.34 1863.98C2739.88 1863.98 2791.55 1920.64 2791.55 1990.75C2791.55 2060.85 2739.88 2117.52 2676.34 2117.52C2612.8 2117.52 2561.13 2060.85 2561.13 1990.75C2561.13 1920.64 2612.8 1863.98 2676.34 1863.98Z" fill="url(#paint0_linear_2_112)" stroke="#B38B24" stroke-width="2"/>
+</g>
+<g id="Ribbon">
+<rect id="Rectangle 149" width="1105.39" height="342.103" transform="matrix(-0.718901 0.695113 -0.7189 -0.695113 3571.23 2049.63)" fill="#853133"/>
+<line id="Line 17" y1="-15" x2="1312.8" y2="-15" transform="matrix(-0.718901 0.695113 -0.7189 -0.695113 3439.77 1760)" stroke="#FFD56A" stroke-width="30"/>
+</g>
+<g id="Ribbon_2">
+<rect id="Rectangle 149_2" width="1105.39" height="342.103" transform="matrix(0.718901 -0.695113 0.718901 0.695113 -311 509.371)" fill="#853133"/>
+<line id="Line 17_2" y1="-15" x2="1312.8" y2="-15" transform="matrix(0.718901 -0.695113 0.718901 0.695113 -179.542 799)" stroke="#FFD56A" stroke-width="30"/>
+</g>
+</g>
+<defs>
+<filter id="filter0_d_2_112" x="2533.49" y="1839" width="285.133" height="312.706" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dy="4"/>
+<feGaussianBlur stdDeviation="2"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2_112"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2_112" result="shape"/>
+</filter>
+<linearGradient id="paint0_linear_2_112" x1="2599.84" y1="1894.89" x2="2777.89" y2="2058.27" gradientUnits="userSpaceOnUse">
+<stop stop-color="#EFC863"/>
+<stop offset="0.520833" stop-color="#FFD772" stop-opacity="0.5"/>
+<stop offset="1" stop-color="#EFC863"/>
+</linearGradient>
+<clipPath id="clip0_2_112">
+<rect width="3300" height="2550" fill="white"/>
+</clipPath>
+</defs>
+</svg>

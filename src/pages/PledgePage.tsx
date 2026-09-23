@@ -1,6 +1,8 @@
 import { useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { pledges } from '../data/pledges'
+import { pledgeImages } from '../data/pledgeImages'
+
 
 function PledgePage() {
 const { id } = useParams()
@@ -31,7 +33,8 @@ const [selectedLevelId, setSelectedLevelId] = useState(
     )
   }
 
-    const selectedLevel = pledge.levels.find(
+const selectedLevel =
+  pledge.levels.find(
     (level) => level.id === selectedLevelId
   ) ?? pledge.levels[0]
 
@@ -126,7 +129,6 @@ window.location.href = data.checkoutUrl
       <section className="pledge-detail">
   <div className="pledge-header">
     <div className="pledge-information">
-      <div className="pledge-detail-icon">{pledge.icon}</div>
 
       <p className="eyebrow">YOUR SELECTED COMMITMENT</p>
 
@@ -136,8 +138,11 @@ window.location.href = data.checkoutUrl
         <span>{pledge.title.toUpperCase()}.</span>
       </h1>
 
+      <div className="pledge-detail-icon">          
+        <img src={pledgeImages[pledge.id]}></img>
+      </div>
+
       <div className="pledge-copy">
-        <p className="pledge-lead">{pledge.description}</p>
 
         
       {pledge.news && (

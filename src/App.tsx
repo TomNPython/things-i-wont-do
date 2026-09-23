@@ -1,7 +1,9 @@
 import { BrowserRouter, Link, Route, Routes } from 'react-router-dom'
 import PledgePage from './pages/PledgePage'
 import SuccessPage from './pages/SuccessPage'
+import ScrollToTop from './components/ScrollToTop'
 import { pledges } from './data/pledges'
+import { pledgeImages } from './data/pledgeImages'
 import './App.css'
 
 function Home() {
@@ -23,7 +25,7 @@ function Home() {
         </p>
 
         <p className="hero-copy">
-          Whether it's destroying the environment, dealing arms to psychopathic warlords, or firing hundreds of employees with zero notice. 
+          Whether it's destroying the environment, arms dealing with psychopathic warlords, or firing hundreds of employees with zero notice. 
         </p>
 
         <p className="hero-copy">
@@ -43,7 +45,7 @@ function Home() {
         </p>
 
         <p className="hero-copy">
-         Pay me <strong>very little money</strong> to continue <strong>not doing terrible things</strong>. 
+         Pay me <strong>a small amount</strong> to continue <strong>not doing terrible things</strong>. 
         </p>
 
         <p className="hero-copy">
@@ -80,7 +82,7 @@ function Home() {
             Pick a job you would like me to continue not doing. 
           </p>
           <p>
-            For a small one-time salary, I promise to honour my pledge as an employee, making the world a better place through merely staying still. 
+            For a small one-time salary, I promise to honour my pledge as an employee, making the world a better place through not being an absolute disgrace of a conscious being. 
           </p>
           <p>
             In addition, I will provide you with a certificate demonstrating to the world what a wonderful boss you are.
@@ -97,8 +99,9 @@ function Home() {
           {pledge.title.toUpperCase()}.
         </h3>
 
-        <div className="pledge-icon">{pledge.icon}</div>
-
+        <div className="pledge-icon">
+          <img src={pledgeImages[pledge.id]}></img>
+        </div>
 
         <p className="pledge-description">
           {pledge.description}
@@ -126,6 +129,7 @@ function Home() {
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pledges/:id" element={<PledgePage />} />
